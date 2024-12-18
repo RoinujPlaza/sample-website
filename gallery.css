@@ -1,0 +1,57 @@
+/* Basic CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(BACK.webp);
+}
+ 
+
+
+.animation-container {
+  position: relative;
+}
+
+
+
+.animated-image {
+  width: 300px; /* Adjust the size of the image */
+  height: auto;
+  animation: moveAndScale 5s infinite ease-in-out, fadeIn 3s forwards;
+}
+
+/* Move and Scale Animation */
+@keyframes moveAndScale {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(100px) scale(1.1);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(-100px) scale(0.9);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
